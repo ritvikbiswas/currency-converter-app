@@ -6,7 +6,25 @@
     <script src="app/lib/angular.min.js"></script>
     <script src="app/app.js"></script>
   </head>
-  <body>
-    
+  <body ng-controller="AppController">
+      <header class="title">
+        {{title}}
+      </header>
+      <div class="currency-dashboard" ng-controller="TickerController">
+          <!--Dashboard will go here-->
+          <div class="ticker">
+              <div class="viewport" ng-class="{moving:moving}">
+                    <div class="box" ng-repeat="webTicker in boxes">
+                        <span style="font-size:15px">{{webTicker.title}}</span>
+                    </div>
+              </div>
+          </div>
+      </div>
+      <div class="converter-menu">
+          <p>Actual converter options will go here!</p>
+      </div>
+      <footer class="footer">
+          <p>Footer</p>
+      </footer>
   </body>
 </html>

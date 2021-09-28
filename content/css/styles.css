@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+}
+
+.currency-dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;;
+    margin-bottom: 1em;
+}
+
+.ticker{
+  width: 40%;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  padding: 5px 5px;
+  background: #555;
+}
+.viewport{
+  position: absolute;
+  height: 100px;
+  border: 1px solid #666;
+  white-space: nowrap;
+}
+.box{
+  display: inline-block;
+  width: 100px;
+  height: 100%;
+  border-left: 1px solid #eee;
+  text-align: center;
+  color: #ddd;
+}
+.viewport.moving{
+  animation: moveLeft  1s infinite;
+}
+
+@keyframes moveLeft {
+    0% { transform: translateX(0) }
+   
+    100% { transform: translateX(-110px) }
+    
+}
+
+.converter-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
