@@ -66,8 +66,10 @@ header{
     margin-bottom: 1em;
 }
 
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.conversion-arrow-img{
+    margin: 1em;
+}
+
+.table, th, td{
+    border: 1px solid black;
 }
