@@ -2,7 +2,9 @@
 <html lang="en" ng-app="myApp">
     <head>
         <title>Currency Converter App</title>
+
         <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+
         <script src="app/lib/angular.min.js"></script>
         <script src="https://kit.fontawesome.com/cf6ba09169.js" crossorigin="anonymous"></script>
         <script src="app/app.js"></script>
@@ -17,6 +19,8 @@
                 <div class="viewport" ng-class="{moving:moving}">
                     <div class="box" ng-repeat="webTicker in boxes">
                         <span style="font-size:15px">{{webTicker.title}}</span>
+                        <br>
+                        <span style="font-size:15px">{{webTicker.value}}</span>
                     </div>
                 </div>
             </div>
@@ -54,6 +58,10 @@
                     <tr>
                         <th class="table-head">Currency</th>
                         <th class="table-head">Conversion Value</th>
+                    </tr>
+                    <tr ng-repeat="(key, value) in conversions">
+                        <td>{{key}}</td>
+                        <td>{{value}}</td>
                     </tr>
                 </table>
             </div>   
