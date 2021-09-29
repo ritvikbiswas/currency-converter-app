@@ -37,3 +37,12 @@ myApp.controller('TickerController', [
         $interval($scope.moveLeft, 2000);
     }
 ]);
+
+myApp.controller('MenuController', [
+    '$scope',
+    function($scope){
+        $scope.convert = function(userInput){
+            console.log(userInput);
+        }
+    }
+]);

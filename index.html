@@ -21,27 +21,42 @@
                 </div>
             </div>
         </div>
-        <div class="converter-menu">
+        <div class="converter-menu" ng-controller="MenuController">
             <!--Actual converter options will go here!-->
-            <select name="currencies" id="currencies" class="currency-selector">
-                <option value="USD">USD</option>
-                <option value="GBP">GBP</option>
-                <option value="EUR">EUR</option>
-                <option value="CAD">CAD</option>
-                <option value="CNY">CNY</option>
-                <option value="INR">INR</option>
-                <option value="HKD">HKD</option>
-                <option value="JPY">JPY</option>
-                <option value="SGD">SGD</option>
-            </select>
-            <input type="text" class= "currency-value" placeholder="Enter your value here..."/>
-            <i class="fas fa-arrows-alt-h fa-10x conversion-arrow-img"></i>
-            <table class = "conversion-table">
-                <tr>
-                    <th>Currency</th>
-                    <th>Conversion Value</th>
-                </tr>
-            </table>
+            <div class="cm-panel1">
+                <form novalidate class="converter-form">
+                    <label for="choose-currency" class="prompt">Choose a currency and enter an amount to convert!</label>
+                    <div>
+                        <select name="currencies" id="currencies" class="currency-selector" ng-model="userInput.currency">
+                            <option value="USD">USD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="EUR">EUR</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CNY">CNY</option>
+                            <option value="INR">INR</option>
+                            <option value="HKD">HKD</option>
+                            <option value="JPY">JPY</option>
+                            <option value="SGD">SGD</option>
+                        </select>
+                        <input type="text" class= "currency-value" placeholder="Enter your value here..." ng-model="userInput.value" />
+                    </div>
+                    <label for="choose-date" class="prompt">Choose a date for the exchange rates to be used!</label>
+                    <input type="date" class= "date-input" ng-model="userInput.date" />
+                    <input type="submit" value="Convert!" ng-click="convert(userInput)" />
+                </form>
+            </div>
+            <div class="cm-panel2">
+                <i class="fas fa-arrows-alt-h fa-10x conversion-arrow-img"></i>
+            </div>
+            <div class="cm-panel3">
+                <label for="choose-currency" class="prompt">Table of Conversions</label>
+                <table class = "conversion-table">
+                    <tr>
+                        <th class="table-head">Currency</th>
+                        <th class="table-head">Conversion Value</th>
+                    </tr>
+                </table>
+            </div>   
         </div>
   </body>
 </html>
