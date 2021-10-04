@@ -11,7 +11,7 @@ myApp.controller('TickerController', [
     '$scope', '$timeout', '$interval', '$http', 
     function($scope, $timeout, $interval, $http){
         let rates = {};
-        $http.get("https://api.frankfurter.app/latest?from=USD").then(
+        $http.get("http://localhost:3000/fxapi/latest?from=USD").then(
             function success(response){
                 rates = response.data.rates;
                 $scope.boxes = [
@@ -81,7 +81,7 @@ myApp.controller('MenuController', [
             currencies = currencies.filter(item => item != currencyInput);
             //console.log(currencies);
 
-            let url = "https://api.frankfurter.app/"+dateInput+"?amount="+valueInput+"&from="+currencyInput;
+            let url = "http://localhost:3000/fxapi/convert/"+dateInput+"?amount="+valueInput+"&from="+currencyInput;
             console.log(url);
 
             $http.get(url).then(
