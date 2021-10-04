@@ -1,35 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap");
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Noto Sans Display', sans-serif;
+body {
+  font-family: "Noto Sans Display", sans-serif;
 }
 
-.title-div{
+.title-div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5em;
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
 }
 
-.currency-dashboard{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1em;;
-    margin-bottom: 1em;
+.currency-dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-.ticker{
+.ticker {
   width: 40%;
   height: 60px;
   overflow: hidden;
@@ -37,13 +37,13 @@ header{
   padding: 5px 5px;
   background: #555;
 }
-.viewport{
+.viewport {
   position: absolute;
   height: 100px;
   border: 1px solid #666;
   white-space: nowrap;
 }
-.box{
+.box {
   display: inline-block;
   width: 100px;
   height: 100%;
@@ -51,32 +51,35 @@ header{
   text-align: center;
   color: #ddd;
 }
-.viewport.moving{
-  animation: moveLeft  1s infinite;
+.viewport.moving {
+  animation: moveLeft 1s infinite;
 }
 
 @keyframes moveLeft {
-    0% { transform: translateX(0) }
-   
-    100% { transform: translateX(-110px) }
-    
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-110px);
+  }
 }
 
-.converter-menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.converter-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    border: 1px solid black;
-    margin-top: 1em;
-    margin-bottom: 1em;
+  border: 1px solid black;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-.prompt{
+.prompt {
   font-weight: bold;
 }
 
-.cm-panel1{
+.cm-panel1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,45 +88,45 @@ header{
   width: 33%;
 }
 
-.converter-form{
+.converter-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.date-input{
+.date-input {
   width: 200px;
 }
 
-.submit-btn{
+.submit-btn {
   margin-top: 1em;
 }
 
-.cm-panel2{
+.cm-panel2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   width: 33%;
-
 }
 
-.cm-panel3{
+.cm-panel3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   width: 33%;
-
 }
 
-.conversion-arrow-img{
-    margin-left: 1em;
-    margin-right: 1em;
+.conversion-arrow-img {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
-.table, th, td{
-    border: 1px solid black;
+.table,
+th,
+td {
+  border: 1px solid black;
 }
