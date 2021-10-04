@@ -8,6 +8,12 @@ body{
     font-family: 'Noto Sans Display', sans-serif;
 }
 
+.title-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 header{
     display: flex;
     justify-content: center;
@@ -86,8 +92,11 @@ header{
 }
 
 .date-input{
-  margin-bottom: 1em;
   width: 200px;
+}
+
+.submit-btn{
+  margin-top: 1em;
 }
 
 .cm-panel2{
