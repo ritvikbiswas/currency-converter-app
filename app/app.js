@@ -104,7 +104,7 @@ myApp.controller('MenuController', [
     }
 ]);
 
-myApp.controller('MenuController', [
+myApp.controller('AverageController', [
     '$scope', '$http',
     function($scope, $http){
         /**
@@ -130,13 +130,14 @@ myApp.controller('MenuController', [
             //console.log(formatDate(userInput.date));
 
             let currencyInput = userInput.currency;
-            let valueInput = userInput.value;
-            let dateInput = formatDate(userInput.date);
+            let endDate = formatDate(userInput.endDate);
+            let startDate = formatDate(userInput.startDate);
 
             currencies = currencies.filter(item => item != currencyInput);
             //console.log(currencies);
 
-            let url = "https://api.frankfurter.app/"+dateInput+"?amount="+valueInput+"&from="+currencyInput;
+            //let url = "https://api.frankfurter.app/"+dateInput+"?amount="+valueInput+"&from="+currencyInput;
+            let url = "http://localhost:3000/fxapi/average/"+currencyInput+"?start="+startDate+"&end="+endDate;
             console.log(url);
 
             $http.get(url).then(
